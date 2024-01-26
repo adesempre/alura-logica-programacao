@@ -7,7 +7,11 @@ function fluxoPadrao() {
   if (numeroSecreto == chute) {
     alert(`Isso aí! Você descobriu o número secreto (${numeroSecreto})`);
   } else {
-    alert("Você errou :(");
+    if (chute > numeroSecreto) {
+      alert(`O número secreto é menor que ${chute}`);
+    } else {
+      alert(`O número secreto é maior que ${chute}`);
+    }
   }
 }
 
