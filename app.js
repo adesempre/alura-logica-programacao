@@ -1,13 +1,14 @@
 function fluxoPadrao() {
+  const NUMERO_MAXIMO = 1000;
   alert("Boas vindas ao jogo do número secreto!");
-  let numeroSecreto = parseInt(Math.random() * 100) + 1;
+  let numeroSecreto = parseInt(Math.random() * NUMERO_MAXIMO) + 1;
   let tentativas = 0;
   console.log(numeroSecreto);
   let chute;
   // enquanto o chute não for
   while (numeroSecreto != chute && chute != 0) {
     chute = prompt(
-      "Escolha um número entre 1 e 100. Ou 0 (zero) para desistir"
+      `Escolha um número entre 1 e ${NUMERO_MAXIMO}. Ou 0 (zero) para desistir`
     );
     tentativas++;
     if (chute != 0) {
