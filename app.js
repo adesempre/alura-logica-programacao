@@ -6,7 +6,9 @@ function fluxoPadrao() {
   let chute;
   // enquanto o chute não for
   while (numeroSecreto != chute && chute != 0) {
-    chute = prompt("Escolha um número entre 1 e 100. Ou 0 (zero) para desistir");
+    chute = prompt(
+      "Escolha um número entre 1 e 100. Ou 0 (zero) para desistir"
+    );
     tentativas++;
     if (chute != 0) {
       if (chute == numeroSecreto) {
@@ -84,6 +86,45 @@ function desafioAula03() {
   for (let i = 0; i <= numeroInformado; i++) {
     console.log("indo...", i);
   }
+}
+
+function desafioAula04() {
+  console.log("Bem vindo!");
+  let nome = "Thiago";
+  console.log(`Olá, ${nome}!`);
+  alert(`Olá, ${nome}!`);
+  let linguagem = prompt(
+    "Qual a linguagem de programação que você mais gosta?"
+  );
+  let valor1 = 2024;
+  let valor2 = 26;
+  let resultado = valor1 + valor2;
+  console.log(`A soma de ${valor1} e ${valor2} é igual a ${resultado}`);
+  console.log(
+    `A diferença entre ${valor1} e ${valor2} é igual a ${valor1 - valor2}`
+  );
+  let idade = prompt("Qual sua idade?");
+  console.log(
+    `${nome}, que gosta de ${linguagem} é ${
+      idade < 18 ? "menor" : "maior"
+    } de idade`
+  );
+  let numero = prompt("Informe um número");
+  if (numero == 0) {
+    console.log("O número é o zero");
+  } else if (numero < 0) {
+    console.log("O número é negativo");
+  } else {
+    console.log("O número é positivo");
+  }
+  for (let i = 1; i <= 10; i++) {
+    console.log(i);
+  }
+  let nota = parseInt(Math.random() * 10) + 1;
+  console.log(nota < 7 ? "Reprovado" : "Aprovado");
+  console.log("Random", Math.random());
+  console.log("Random entre 1 e 10", parseInt(Math.random() * 10) + 1);
+  console.log("Random entre 1 e 1000", parseInt(Math.random() * 1000) + 1);
 }
 
 fluxoPadrao();
