@@ -19,10 +19,9 @@ function fluxoPadrao() {
     }
   }
   if (chute == numeroSecreto) {
+    let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
     alert(
-      `Isso aí! Você descobriu o número secreto (${numeroSecreto}) com ${tentativas} tentativa${
-        tentativas == 1 ? "" : "s"
-      }.`
+      `Isso aí! Você descobriu o número secreto (${numeroSecreto}) com ${tentativas} ${palavraTentativa}.`
     );
   }
 }
