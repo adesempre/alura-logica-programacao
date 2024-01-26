@@ -10,15 +10,20 @@ function fluxoPadrao() {
     tentativas++;
     if (chute != 0) {
       if (chute == numeroSecreto) {
-        alert(
-          `Isso aí! Você descobriu o número secreto (${numeroSecreto}) com ${tentativas} tentativas.`
-        );
+        break;
       } else if (chute > numeroSecreto) {
         alert(`O número secreto é menor que ${chute}`);
       } else {
         alert(`O número secreto é maior que ${chute}`);
       }
     }
+  }
+  if (chute == numeroSecreto) {
+    alert(
+      `Isso aí! Você descobriu o número secreto (${numeroSecreto}) com ${tentativas} tentativa${
+        tentativas == 1 ? "" : "s"
+      }.`
+    );
   }
 }
 
