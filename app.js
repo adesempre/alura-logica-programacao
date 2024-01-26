@@ -1,14 +1,16 @@
 function fluxoPadrao() {
   alert("Boas vindas ao jogo do número secreto!");
   let numeroSecreto = 29;
+  let tentativas = 0;
   console.log(numeroSecreto);
   let chute;
   // enquanto o chute não for
   while (numeroSecreto != chute && chute != 0) {
-    chute = prompt("Escolha um número entre 1 e 30. Ou 0 (zero) para desistir");
+      chute = prompt("Escolha um número entre 1 e 30. Ou 0 (zero) para desistir");
+      tentativas++;
     if (chute != 0) {
       if (chute == numeroSecreto) {
-        alert(`Isso aí! Você descobriu o número secreto (${numeroSecreto})`);
+        alert(`Isso aí! Você descobriu o número secreto (${numeroSecreto}) com ${tentativas} tentativas.`);
       } else if (chute > numeroSecreto) {
         alert(`O número secreto é menor que ${chute}`);
       } else {
